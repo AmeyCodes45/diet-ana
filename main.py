@@ -1,10 +1,20 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import google.generativeai as genai
 import os
 
 # Initialize FastAPI
 app = FastAPI()
+
+# Enable CORS (no restriction)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Open access
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Configure Gemini API
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
