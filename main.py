@@ -33,7 +33,7 @@ class DietInput(BaseModel):
 @app.post("/generate-monthly-diet")
 async def generate_monthly_diet(data: DietInput):
     prompt = f"""
-    You are a healthcare nutritionist preparing a simple monthly diet plan for a pregnant woman in rural India,Remeber this Women is from RURAL AREA.
+    You are a healthcare nutritionist preparing a simple monthly diet plan for a pregnant woman in rural India,Remeber this Women is from RURAL AREA,Provide in Both language Hindi and english.
 
     ➤ Divide the response into 4 weeks. For each week, include:
     - Breakfast (typical options)
