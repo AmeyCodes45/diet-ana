@@ -8,7 +8,7 @@ app = FastAPI()
 
 # Configure Gemini API
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-1.5-pro-001")
 
 # Input model
 class DietInput(BaseModel):
