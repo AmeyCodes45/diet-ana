@@ -53,6 +53,7 @@ Input parameters:
 - Tea/Coffee: {tea_coffee}
 - Budget: {food_budget}
 - Food affordability issues: {affordability_constraints}
+- Location: {district}, {state}
 
 **Instructions:**
 - Suggest a **4-week plan**, with one block per week (not daily breakdown).
